@@ -1,0 +1,252 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@font-face {
+    font-family: "Alesand Round";
+    src: url(../assets/Font/Alesand\ Extra\ Round.ttf);
+}
+
+header, footer{
+    background-color: var(--black);
+    width: 100%;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    font-family: "Alesand Round";
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 80px; 
+    height: auto; 
+}
+
+nav{
+    display: flex;
+}
+
+#bar{
+    font-size: 1.5rem;
+    color: var(--white);
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+nav a:hover{
+    color: var(--red);
+}
+
+.highlight-color a {
+    text-decoration: underline;
+    color: var(--red);
+}
+
+main {
+    padding: 50px;
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url(../assets/Font/Manasco\ Regular.otf);
+}
+
+@font-face {
+    font-family: "Apex";
+    src: url(../assets/Font/Apex\ Regular.otf);
+}
+
+.type {
+    font-family: "myFont";
+    font-size: 150px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 8px grey;
+}
+
+.type-tier{
+    font-family: "Apex";
+    font-size: 70px;
+    text-align: center;
+}
+
+.car-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.car-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    text-shadow: 5px 5px 8px grey;
+}
+
+
+.car-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.car-item p {
+    font-size: 30px;
+}
+
+footer {
+    margin-top: 80px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.social-icons {
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 20px;
+}
+
+@media (max-width: 769px) {
+
+    .logo img{
+        width: 50px;
+        height: auto;
+    }
+    
+    nav a{
+        font-size: 25px;
+    } 
+
+    .car-gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .car-item{
+        text-align: center;
+    }
+    
+    .car-item img {
+        width: 80%;
+    }
+
+    .car-item p {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 631px){
+    nav{
+        display: flex;
+        padding: 1rem 3rem;
+    }
+
+
+    #item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        text-align: left;
+        width: 300px;
+        height: 80vh;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 100000;
+        padding: 10px 0;
+        transition: 0.5s;
+    }
+
+    nav a {
+        font-size: 35px;
+    }
+
+    #bar{
+        font-size: 1.5rem;
+        color: var(--white);
+        display: initial;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 501px){
+    nav a{
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+}

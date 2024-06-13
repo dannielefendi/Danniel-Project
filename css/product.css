@@ -1,0 +1,279 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+
+body {
+    color: var(--white);
+}
+
+@font-face {
+    font-family: "Alesand Round";
+    src: url(../assets/Font/Alesand\ Extra\ Round.ttf);
+}
+
+header, footer{
+    background-color: var(--black);
+    width: 100%;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    font-family: "Alesand Round";
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 80px; 
+    height: auto; 
+}
+
+nav{
+    display: flex;
+}
+
+#bar{
+    font-size: 1.5rem;
+    color: var(--white);
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+nav a:hover{
+    color: var(--red);
+}
+
+.highlight-color a {
+    text-decoration: underline;
+    color: var(--red);
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url(../assets/Font/Manasco\ Regular.otf);
+}
+
+@font-face {
+    font-family: "Apex";
+    src: url(../assets/Font/Apex\ Regular.otf);
+}
+
+
+
+.white-link{
+    color: var(--white);
+}
+
+.tiers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 780px;
+    background-image: url(../assets/porsche1.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.layout{
+    flex: 1 ;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.type {
+    font-family: "myFont";
+    flex: 1;
+    padding: 5px;
+    font-size: 100px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.type:hover{
+    transform: translateY(-10px);
+}
+
+.type a{
+    text-decoration: none;
+}
+
+.tier {
+    font-family: "Apex";
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+footer {
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.social-icons {
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 20px;
+}
+
+
+@media (max-width: 769px) {
+
+    .logo img{
+        width: 50px;
+        height: auto;
+    }
+    
+    nav a{
+        font-size: 25px;
+    }
+    
+
+    .tiers{
+        width: auto;
+        height: 1050px;
+    }
+
+    .layout{
+        margin-top: 50px;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    
+
+    .type{
+        font-size: 90px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .tier{
+        flex-direction: row;
+        font-size: 35px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a img {
+        width: 15px;
+        height: 15px;
+    }
+    
+}
+
+@media (max-width: 631px){
+    nav{
+        display: flex;
+        padding: 1rem 3rem;
+    }
+
+
+    #item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        text-align: left;
+        width: 300px;
+        height: 80vh;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 100000;
+        padding: 10px 0;
+        transition: 0.5s;
+    }
+
+    nav a {
+        font-size: 35px;
+    }
+
+    #bar{
+        font-size: 1.5rem;
+        color: var(--white);
+        display: initial;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 501px){
+    nav a{
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+}

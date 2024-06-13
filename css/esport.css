@@ -1,0 +1,539 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@font-face {
+    font-family: "Alesand Round";
+    src: url(../assets/Font/Alesand\ Extra\ Round.ttf);
+}
+
+
+header, footer{
+    background-color: var(--black);
+    width: 100%;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    font-family: "Alesand Round";
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 80px; 
+    height: auto; 
+}
+
+nav{
+    display: flex;
+}
+
+#bar{
+    font-size: 1.5rem;
+    color: var(--white);
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+nav a:hover{
+    color: var(--red);
+}
+
+.highlight-color a {
+    text-decoration: underline;
+    color: var(--red);
+}
+
+main{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.background-video{
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    object-fit:cover;
+    z-index: -1;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+/* side bar */
+.past-events {
+    margin-left: 10px;
+}
+
+.past-events h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 5px 5px 8px var(--red);
+}
+
+.side-event{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.event img {
+    display: fixed;
+    height: 380px;
+    width: auto;
+    border-radius: 10px ;
+    margin-bottom: 10px;    
+}
+
+.sidebar-info1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.race-info1{
+    position: absolute;
+    font-size: 50px;
+    top: 1070px;
+    left: 80px;
+    text-shadow: 2px 2px 5px var(--black);
+    font-weight: bold;
+}
+
+.race-date1{
+    position: absolute;
+    font-size: 20px;
+    top: 1130px;
+    left: 80px;
+    text-shadow: 2px 2px 5px var(--black);
+    font-weight: lighter;
+}
+
+.race-prize1{
+    background-color: var(--white);
+    color: var(--red);
+    padding: 7px 7px;
+    border-radius:10px;
+    position: absolute;
+    font-size: 30px;
+    top: 1370px;
+    left: 80px;
+    font-weight: bold;
+}
+
+.sidebar-info2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.race-info2{
+    position: absolute;
+    font-size: 50px;
+    top: 1070px;
+    left: 815px;
+    text-shadow: 2px 2px 5px var(--black);
+    font-weight: bold;
+}
+
+.race-date2{
+    position: absolute;
+    font-size: 20px;
+    top: 1130px;
+    left: 815px;
+    text-shadow: 2px 2px 5px var(--black);
+    font-weight: lighter;
+}
+
+.race-prize2{
+    background-color: var(--white);
+    color: var(--red);
+    padding: 7px 7px;
+    border-radius:10px;
+    position: absolute;
+    font-size: 30px;
+    top: 1370px;
+    left: 815px;
+    font-weight: bold;
+}
+
+
+.side-detail{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+.numbers {
+    font-size: 70px;
+    font-weight: bold;
+    left: 200px;
+}
+
+.statistic-content{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    font-size: 36px;
+}
+
+@keyframes slide{
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.sponsors{
+    overflow: hidden;
+    padding: 10px 0px;
+    background: var(--black);
+    white-space: nowrap;
+    position: relative;
+}
+
+.sponsors:before,.sponsors::after{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.sponsors:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0),var(--black));
+}
+
+.sponsors::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0),var(--black));
+ 
+}
+
+.sponsors:hover .logos-slide{
+    animation-play-state: paused;
+}
+
+.sponsors img{
+    margin: 0 20px;
+    height: 100px;
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.social-icons {
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 20px;
+}
+
+@media (max-width: 769px) {
+
+    .logo img{
+        width: 50px;
+        height: auto;
+    }
+    
+    nav a{
+        font-size: 25px;
+    } 
+
+    .background-video{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+    
+    .side-event{
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .race-info1{
+        top: 740px;
+    }
+    
+    .race-date1{
+        top: 800px;
+    }
+    
+    .race-prize1{
+        top: 1040px;
+    }
+
+    .race-info2{
+        left: 80px;
+        top: 1155px;
+    }
+    
+    .race-date2{
+        left: 80px;
+        top: 1215px;
+    }
+    
+    .race-prize2{
+        left: 80px;
+        top: 1455px;
+    }
+
+    .numbers {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .statistic-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 40px;
+        gap: 15px;
+    }
+
+    .sponsors{
+        margin-bottom: 10px;
+    }
+
+    .sponsors img{
+        width: 250px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 631px){
+
+    nav{
+        display: flex;
+        padding: 1rem 3rem;
+    }
+
+
+    #item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        text-align: left;
+        width: 300px;
+        height: 80vh;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 100000;
+        padding: 10px 0;
+        transition: 0.5s;
+    }
+
+    nav a {
+        font-size: 35px;
+    }
+
+    #bar{
+        font-size: 1.5rem;
+        color: var(--white);
+        display: initial;
+        cursor: pointer;
+    }
+    
+    .background-video{
+        width: 530px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .side-event{
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .event img {
+        height: auto;
+        width: 510px;  
+    }
+
+    .race-info1{
+        font-size: 38px ;
+        top: 540px;
+    }
+    
+    .race-date1{
+        font-size: 20px;
+        top: 590px;
+    }
+    
+    .race-prize1{
+        font-size: 30px;
+        top: 750px;
+    }
+
+    .race-info2{
+        font-size: 38px;
+        top: 865px;
+    }
+    
+    .race-date2{
+        font-size: 20px;
+        top: 915px;
+    }
+    
+    .race-prize2{
+        font-size: 30px;
+        top: 1075px;
+    }
+
+}
+
+@media (max-width: 501px){
+
+    nav a{
+        font-size: 25px;
+    }
+
+    .background-video{
+        width: auto;
+        height: 210px;
+        margin-bottom: 20px;
+    }
+
+    .past-events h1 {
+        font-size: 50px;
+    }
+    
+    .side-event{
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .event img {
+        height: 200px;
+        width: auto;  
+    }
+    
+    .race-info1{
+        font-size: 25px ;
+        top: 430px;
+    }
+    
+    .race-date1{
+        font-size: 14px;
+        top: 460px;
+    }
+    
+    .race-prize1{
+        font-size: 20px;
+        top: 570px;
+    }
+
+    .race-info2{
+        font-size: 25px;
+        top: 665px;
+    }
+    
+    .race-date2{
+        font-size: 14px;
+        top: 695px;
+    }
+    
+    .race-prize2{
+        font-size: 20px;
+        top: 805px;
+    }
+
+    .numbers {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .statistic-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+        gap: 15px;
+    }
+
+    .sponsors img{
+        height: 70px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+}
+

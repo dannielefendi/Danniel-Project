@@ -1,0 +1,249 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+
+body {
+    color: var(--white);
+}
+
+@font-face {
+    font-family: "Alesand Round";
+    src: url(../assets/Font/Alesand\ Extra\ Round.ttf);
+}
+
+
+header, footer{
+    background-color: var(--black);
+    width: 100%;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    font-family: "Alesand Round";
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 80px; 
+    height: auto; 
+}
+
+nav{
+    display: flex;
+}
+
+#bar{
+    font-size: 1.5rem;
+    color: var(--white);
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+nav a:hover{
+    color: var(--red);
+}
+
+.highlight-color a {
+    text-decoration: underline;
+    color: var(--red);
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url(../assets/Font/Call\ of\ Ops\ Duty.otf);
+}
+
+.hero {
+    background-image: url(../assets/yellow\ porsche\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 110vh;
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.hero h1 {
+    margin-top: 60px;
+    font-family: "myFont";
+    font-size: 100px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.hero .about {
+    margin-top: 300px;
+    text-align: center;
+    font-family: "Alesand Round";
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+.hero .info{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero .start {
+    background-color: var(--white);
+    color: var(--black);
+    border: var(--white);
+    padding: 6px 8px;
+    border-radius: 5px ;
+    font-family: "Alesand Round";
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.social-icons {
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 20px;
+}
+
+
+@media (max-width: 769px) {
+    .logo img{
+        width: 50px;
+        height: auto;
+    }
+    
+    nav a{
+        font-size: 25px;
+    }
+    
+    .hero h1{
+        font-size: 90px;
+    }
+
+    .hero .about{
+        margin-top: 350px;
+    }
+
+    .hero .info{
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 631px){
+
+    nav{
+        display: flex;
+        padding: 1rem 3rem;
+    }
+
+
+    #item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        text-align: left;
+        width: 300px;
+        height: 80vh;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 100000;
+        padding: 10px 0;
+        transition: 0.5s;
+    }
+
+    nav a {
+        font-size: 35px;
+    }
+
+    #bar{
+        font-size: 1.5rem;
+        color: var(--white);
+        display: initial;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 501px){
+
+    nav a{
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+}
+

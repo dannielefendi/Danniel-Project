@@ -1,4 +1,4 @@
-# The simple Website theme of a racing game with a name Ashpatl 9: Rejens.
+# The simple website theme of a racing game with a name Ashpatl 9: Rejens.
 
 ### The procedure :
 - I designed the initial visual concept and took some reference examples.
